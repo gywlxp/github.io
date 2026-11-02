@@ -1,1 +1,21 @@
+name: Update Playlist
+on: [push, workflow_dispatch]
 
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python scripts/update_playlist.py --input playlist/sources.txt --output playlist/all.m3u --meta playlist/meta.json --max-per-channel 3
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add playlist/all.m3u playlist/meta.json
+          git diff --cached --quiet || (git commit -m "auto update" && git push)
