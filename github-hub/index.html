@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>我的数字工作台 · 个人导航页</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%231d4ed8'/%3E%3Ccircle cx='16' cy='16' r='6' fill='white'/%3E%3C/svg%3E">
+<script src="https://aisearch-task.bj.bcebos.com/static/tailwindcss-3.4.17.js"></script>
+<script src="https://aisearch-task.bj.bcebos.com/static/echarts-5.6.0.min.js"></script>
+<style>
+  :root{
+    --brand-rgb: 29, 78, 216;
+    --accent-rgb: 234, 88, 12;
+    --ink: #0f172a;
+  }
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'PingFang SC','HarmonyOS Sans SC','Microsoft YaHei',sans-serif;
+    color:var(--ink);
+    background:
+      radial-gradient(1200px 600px at 12% -8%, rgba(var(--brand-rgb),0.10), transparent 60%),
+      radial-gradient(900px 520px at 92% 4%, rgba(var(--accent-rgb),0.10), transparent 62%),
+      linear-gradient(160deg,#f8fafc 0%,#ffffff 45%,#eff6ff 100%);
+    background-attachment:fixed;
+    -webkit-font-smoothing:antialiased;
+  }
+  .display{font-family:'Songti SC','STSong','SimSun',serif;letter-spacing:-0.01em;}
+  .mono{font-family:'SF Mono','Menlo','Consolas','Courier New',monospace;}
+  .grid-texture{
+    background-image:
+      linear-gradient(rgba(var(--brand-rgb),0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(var(--brand-rgb),0.07) 1px, transparent 1px);
+    background-size:26px 26px;
+    -webkit-mask-image:radial-gradient(closest-side, #000 40%, transparent 100%);
+    mask-image:radial-gradient(closest-side, #000 40%, transparent 100%);
+  }
+  @keyframes riseIn{
+    from{opacity:.92; transform:translateY(10px);}
+    to{opacity:1; transform:translateY(0);}
+  }
+  .rise{animation:riseIn .55s cubic-bezier(.2,.8,.2,1) both;}
+  .rise-1{animation-delay:.04s;} .rise-2{animation-delay:.10s;}
+  .rise-3{animation-delay:.16s;} .rise-4{animation-delay:.22s;}
+  .card-hover{transition:transform .22s cubic-bezier(.2,.8,.2,1), box-shadow .22s, border-color .22s;}
+  .card-hover:hover{transform:translateY(-4px); box-shadow:0 16px 34px -18px rgba(var(--brand-rgb),0.5); border-color:rgba(var(--brand-rgb),0.45);}
+  .tab-btn{transition:all .2s ease;}
+  .tab-active{background:rgb(var(--brand-rgb)); color:#fff; border-color:rgb(var(--brand-rgb)); box-shadow:0 10px 24px -12px rgba(var(--brand-rgb),0.8);}
+  .tab-idle{background:rgba(255,255,255,.75); color:#334155; border-color:rgba(15,23,42,.10);}
+  .tab-idle:hover{border-color:rgba(var(--brand-rgb),0.5); color:rgb(var(--brand-rgb));}
+  ::selection{background:rgba(var(--brand-rgb),0.22);}
+  .no-scrollbar::-webkit-scrollbar{display:none;}
+  .no-scrollbar{-ms-overflow-style:none;scrollbar-width:none;}
+</style>
+</head>
+<body class="min-h-screen">
+
+<!-- 顶部栏 -->
+<header class="sticky top-0 z-40 backdrop-blur-xl bg-white/70 border-b border-slate-900/[0.07]">
+  <div class="max-w-[1180px] mx-auto px-5 h-[60px] flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <span class="w-[34px] h-[34px] rounded-[11px] grid place-items-center text-white font-black text-[15px]"
+            style="background:linear-gradient(135deg,#1d4ed8,#0ea5e9)">導</span>
+      <div class="leading-tight">
+        <p class="text-[15px] font-bold tracking-tight">数字工作台</p>
+        <p class="text-[11px] text-slate-400 tracking-wider">MY STARTPAGE</p>
+      </div>
+    </div>
+    <nav class="hidden md:flex items-center gap-6 text-[14px] text-slate-500">
+      <a href="#nav" class="hover:text-slate-900 transition">快捷导航</a>
+      <a href="#playlist" class="hover:text-slate-900 transition">影视源</a>
+      <a href="#stats" class="hover:text-slate-900 transition">数据</a>
+      <a href="#tips" class="hover:text-slate-900 transition">小贴士</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <span id="clock" class="mono text-[13px] text-slate-500 tabular-nums hidden sm:inline">--:--:--</span>
+      <button id="topSearchBtn" class="w-[34px] h-[34px] rounded-[11px] grid place-items-center border border-slate-900/10 bg-white hover:border-blue-400 transition" title="搜索">
+        <svg class="w-[18px] h-[18px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3-3"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="max-w-[1180px] mx-auto px-5">
+
+  <!-- Hero -->
+  <section class="relative pt-10 md:pt-16 pb-8">
+    <div class="absolute -top-6 right-0 w-[320px] h-[220px] grid-texture pointer-events-none"></div>
+    <div class="grid md:grid-cols-[1.35fr_1fr] gap-8 items-center">
+      <div class="rise rise-1">
+        <p id="greeting" class="text-[13px] tracking-[0.22em] text-blue-700 font-semibold mb-3">下午好 · 欢迎回来</p>
+        <h1 class="display text-[34px] md:text-[52px] leading-[1.06] font-bold">
+          我的<br class="hidden sm:block">数字工作台
+        </h1>
+        <p class="mt-4 text-[16px] leading-relaxed text-slate-500 max-w-[520px]">
+          一个跑在 GitHub Pages 上的个人导航页，顺手接上了自动更新的影视源聚合。
+          常用站点、播放列表、更新状态，都在同一块屏幕里。
+        </p>
+        <div class="mt-6 flex flex-wrap gap-2">
+          <span class="text-[13px] px-3 py-1 rounded-full border border-blue-200 bg-blue-50 text-blue-700">GitHub Pages</span>
+          <span class="text-[13px] px-3 py-1 rounded-full border border-orange-200 bg-orange-50 text-orange-700">Actions 定时任务</span>
+          <span class="text-[13px] px-3 py-1 rounded-full border border-emerald-200 bg-emerald-50 text-emerald-700">零后端 · 零费用</span>
+        </div>
+      </div>
+      <div class="rise rise-2 grid grid-cols-3 gap-3">
+        <div class="col-span-3 rounded-2xl p-5 text-white shadow-xl" style="background:linear-gradient(140deg,#1d4ed8,#0ea5e9)">
+          <p class="text-[12px] tracking-widest opacity-80 uppercase">Indexed Channels</p>
+          <p id="heroChannels" class="display text-[42px] leading-none font-bold mt-2 tabular-nums">--</p>
+          <p class="text-[13px] opacity-85 mt-1">条直播线路已聚合</p>
+        </div>
+        <div class="rounded-2xl p-4 bg-white border border-slate-900/[0.08]">
+          <p id="heroSites" class="display text-[26px] font-bold tabular-nums">24</p>
+          <p class="text-[12px] text-slate-400 mt-1">快捷站点</p>
+        </div>
+        <div class="rounded-2xl p-4 bg-white border border-slate-900/[0.08]">
+          <p id="heroSources" class="display text-[26px] font-bold tabular-nums">--</p>
+          <p class="text-[12px] text-slate-400 mt-1">影视源</p>
+        </div>
+        <div class="rounded-2xl p-4 bg-white border border-slate-900/[0.08]">
+          <p id="heroUpdated" class="display text-[26px] font-bold tabular-nums">--</p>
+          <p class="text-[12px] text-slate-400 mt-1">最近更新</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 搜索 -->
+  <section id="nav" class="rise rise-2 mt-6">
+    <div class="rounded-2xl p-2 bg-white border border-slate-900/[0.08] shadow-sm flex items-center gap-2">
+      <svg class="w-[20px] h-[20px] shrink-0 ml-2 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3-3"/></svg>
+      <input id="search" type="text" aria-label="搜索站点" placeholder="搜索站点名称或描述，也可以直接回车用搜索引擎搜…"
+             class="flex-1 bg-transparent outline-none text-[16px] py-2 placeholder:text-slate-400">
+      <kbd class="hidden sm:inline mono text-[12px] text-slate-400 border border-slate-200 rounded-md px-2 py-1">/</kbd>
+    </div>
+  </section>
+
+  <!-- 分组 Tab + 卡片 -->
+  <section class="mt-6">
+    <div id="tabs" class="flex gap-2 overflow-x-auto no-scrollbar pb-1"></div>
+    <div id="cards" class="mt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"></div>
+    <p id="emptyHint" class="hidden text-center text-[15px] text-slate-400 py-14">没有匹配的站点，换个关键词试试。</p>
+  </section>
+
+  <!-- 影视源 -->
+  <section id="playlist" class="mt-14">
+    <div class="flex items-end justify-between gap-4 flex-wrap mb-5">
+      <div>
+        <p class="text-[13px] tracking-[0.22em] text-orange-600 font-semibold">AUTO-UPDATED PLAYLIST</p>
+        <h2 class="display text-[26px] md:text-[32px] font-bold mt-2">影视源 · 自动更新</h2>
+      </div>
+      <span id="playlistBadge" class="text-[13px] px-3 py-1.5 rounded-full bg-slate-100 text-slate-500 border border-slate-200">读取中…</span>
+    </div>
+
+    <div class="grid lg:grid-cols-[1.5fr_1fr] gap-5">
+      <div class="rounded-2xl bg-white border border-slate-900/[0.08] p-6 shadow-sm">
+        <div class="grid grid-cols-3 gap-3 text-center">
+          <div class="rounded-xl bg-blue-50 py-4">
+            <p id="plChannels" class="display text-[26px] font-bold text-blue-700 tabular-nums">--</p>
+            <p class="text-[12px] text-slate-500 mt-1">频道数</p>
+          </div>
+          <div class="rounded-xl bg-orange-50 py-4">
+            <p id="plStreams" class="display text-[26px] font-bold text-orange-600 tabular-nums">--</p>
+            <p class="text-[12px] text-slate-500 mt-1">线路数</p>
+          </div>
+          <div class="rounded-xl bg-emerald-50 py-4">
+            <p id="plSources" class="display text-[26px] font-bold text-emerald-600 tabular-nums">--</p>
+            <p class="text-[12px] text-slate-500 mt-1">源站数</p>
+          </div>
+        </div>
+
+        <div class="mt-6">
+          <p class="text-[14px] font-semibold text-slate-700 mb-2">订阅地址（导入 PotPlayer / TVBox / Kodi）</p>
+          <div class="flex gap-2">
+            <input id="subUrl" aria-label="播放列表订阅地址" onclick="this.select()" value="加载中…"
+                   class="flex-1 mono text-[13px] px-3 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-600 outline-none">
+            <button id="copyBtn" class="shrink-0 px-4 py-2.5 rounded-xl text-white text-[14px] font-semibold transition"
+                    style="background:rgb(var(--brand-rgb))">复制</button>
+          </div>
+        </div>
+
+        <p id="plUpdated" class="text-[13px] text-slate-400 mt-4">最近更新时间：—</p>
+      </div>
+
+      <div class="rounded-2xl bg-white border border-slate-900/[0.08] p-6 shadow-sm">
+        <p class="text-[14px] font-semibold text-slate-700 mb-3">源站状态</p>
+        <ul id="sourceList" class="space-y-2.5 text-[14px]">
+          <li class="text-slate-400">加载中…</li>
+        </ul>
+        <div class="mt-5 pt-5 border-t border-slate-100">
+          <p class="text-[13px] text-slate-500 leading-relaxed">
+            列表由 <span class="font-semibold text-slate-700">GitHub Actions</span> 每天定时抓取、去重、重新生成，
+            提交回仓库后本页自动读到最新数据。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 数据 -->
+  <section id="stats" class="mt-14">
+    <p class="text-[13px] tracking-[0.22em] text-blue-700 font-semibold">DISTRIBUTION</p>
+    <h2 class="display text-[26px] md:text-[32px] font-bold mt-2 mb-5">频道分组分布</h2>
+    <div class="rounded-2xl bg-white border border-slate-900/[0.08] p-4 md:p-6 shadow-sm">
+      <div id="chart" class="w-full h-[320px]"></div>
+    </div>
+  </section>
+
+  <!-- 小贴士 -->
+  <section id="tips" class="mt-14">
+    <p class="text-[13px] tracking-[0.22em] text-emerald-600 font-semibold">CHEATSHEET</p>
+    <h2 class="display text-[26px] md:text-[32px] font-bold mt-2 mb-5">使用小贴士</h2>
+    <div class="grid md:grid-cols-3 gap-4">
+      <div class="rounded-2xl bg-white border border-slate-900/[0.08] p-5 card-hover">
+        <div class="w-[38px] h-[38px] rounded-xl grid place-items-center bg-blue-50 text-blue-700 mb-4">
+          <svg class="w-[20px] h-[20px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        </div>
+        <p class="text-[16px] font-bold mb-2">改站点更容易</p>
+        <p class="text-[14px] leading-relaxed text-slate-500">所有站点都写在 <span class="mono text-[13px] bg-slate-100 px-1 rounded">index.html</span> 末尾的 <span class="mono text-[13px] bg-slate-100 px-1 rounded">GROUPS</span> 数组里，改名字、改链接、加一条，刷新即生效。</p>
+      </div>
+      <div class="rounded-2xl bg-white border border-slate-900/[0.08] p-5 card-hover">
+        <div class="w-[38px] h-[38px] rounded-xl grid place-items-center bg-orange-50 text-orange-600 mb-4">
+          <svg class="w-[20px] h-[20px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        </div>
+        <p class="text-[16px] font-bold mb-2">改频率只动一行</p>
+        <p class="text-[14px] leading-relaxed text-slate-500">更新节奏由工作流里的 <span class="mono text-[13px] bg-slate-100 px-1 rounded">cron</span> 决定，注意它是 UTC 时间，北京时间要减 8 小时。</p>
+      </div>
+      <div class="rounded-2xl bg-white border border-slate-900/[0.08] p-5 card-hover">
+        <div class="w-[38px] h-[38px] rounded-xl grid place-items-center bg-emerald-50 text-emerald-600 mb-4">
+          <svg class="w-[20px] h-[20px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+        </div>
+        <p class="text-[16px] font-bold mb-2">想加源就加一行</p>
+        <p class="text-[14px] leading-relaxed text-slate-500">往 <span class="mono text-[13px] bg-slate-100 px-1 rounded">playlist/sources.txt</span> 里追一行公开源地址，次日更新就会自动并进去重聚合。</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="mt-16 border-t border-slate-900/[0.07] bg-white/60">
+  <div class="max-w-[1180px] mx-auto px-5 py-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-[13px] text-slate-400">
+    <p>数字工作台 · 由 GitHub Pages 托管</p>
+    <p class="mono">Built with Tailwind &amp; ECharts</p>
+  </div>
+</footer>
+
+<script>
+/* ============ 导航数据（改成你自己的即可） ============ */
+const GROUPS = [
+  { id:'dev', name:'开发', items:[
+    { name:'GitHub', desc:'代码托管与协作平台', url:'https://github.com', color:'#24292f', letter:'G' },
+    { name:'Stack Overflow', desc:'程序员问答社区', url:'https://stackoverflow.com', color:'#ef7b1a', letter:'S' },
+    { name:'MDN', desc:'Web 技术权威文档', url:'https://developer.mozilla.org', color:'#111827', letter:'M' },
+    { name:'Can I use', desc:'浏览器兼容性查询', url:'https://caniuse.com', color:'#c0392b', letter:'C' },
+  ]},
+  { id:'ai', name:'AI 工具', items:[
+    { name:'Claude', desc:'长文本推理助手', url:'https://claude.ai', color:'#c2703d', letter:'C' },
+    { name:'ChatGPT', desc:'通用对话式 AI', url:'https://chat.openai.com', color:'#10a37f', letter:'C' },
+    { name:'Kimi', desc:'超长上下文助手', url:'https://kimi.moonshot.cn', color:'#4f46e5', letter:'K' },
+    { name:'文心一言', desc:'中文大模型助手', url:'https://yiyan.baidu.com', color:'#2563eb', letter:'文' },
+  ]},
+  { id:'media', name:'影音', items:[
+    { name:'哔哩哔哩', desc:'弹幕视频社区', url:'https://www.bilibili.com', color:'#fb7299', letter:'B' },
+    { name:'YouTube', desc:'全球视频平台', url:'https://www.youtube.com', color:'#e11d48', letter:'Y' },
+    { name:'豆瓣', desc:'影视书音评分', url:'https://www.douban.com', color:'#2e7d32', letter:'豆' },
+    { name:'电视直播', desc:'聚合播放列表入口', url:'#playlist', color:'#ea580c', letter:'TV' },
+  ]},
+  { id:'learn', name:'学习', items:[
+    { name:'知乎', desc:'中文问答社区', url:'https://www.zhihu.com', color:'#0f6efd', letter:'知' },
+    { name:'掘金', desc:'开发者技术社区', url:'https://juejin.cn', color:'#1e80ff', letter:'掘' },
+    { name:'菜鸟教程', desc:'编程入门教程', url:'https://www.runoob.com', color:'#5cb85c', letter:'菜' },
+    { name:'Coursera', desc:'国际在线课程', url:'https://www.coursera.org', color:'#0056d2', letter:'C' },
+  ]},
+  { id:'tool', name:'效率工具', items:[
+    { name:'PicGo', desc:'图床上传神器', url:'https://picgo.github.io', color:'#12b886', letter:'P' },
+    { name:'TinyPNG', desc:'图片无损压缩', url:'https://tinypng.com', color:'#1d4ed8', letter:'T' },
+    { name:'JSON 格式化', desc:'在线 JSON 工具', url:'https://www.json.cn', color:'#7c3aed', letter:'{}' },
+    { name:'Regex101', desc:'正则在线调试', url:'https://regex101.com', color:'#0891b2', letter:'R' },
+  ]},
+  { id:'life', name:'生活服务', items:[
+    { name:'高德地图', desc:'出行导航', url:'https://www.amap.com', color:'#1a73e8', letter:'高' },
+    { name:'12306', desc:'铁路购票', url:'https://www.12306.cn', color:'#0055a5', letter:'123' },
+    { name:'京东', desc:'综合电商', url:'https://www.jd.com', color:'#c81623', letter:'京' },
+    { name:'中国天气', desc:'天气预报', url:'https://www.weather.com.cn', color:'#0ea5e9', letter:'天' },
+  ]},
+];
+
+const ALL_ITEMS = GROUPS.flatMap(g => g.items.map(it => ({ ...it, group: g.name })));
+document.getElementById('heroSites').textContent = ALL_ITEMS.length;
+
+/* ============ 时钟与问候 ============ */
+function tick(){
+  const now = new Date();
+  const p = n => String(n).padStart(2,'0');
+  document.getElementById('clock').textContent = `${p(now.getHours())}:${p(now.getMinutes())}:${p(now.getSeconds())}`;
+  const h = now.getHours();
+  const g = h < 6 ? '凌晨好' : h < 11 ? '早上好' : h < 14 ? '中午好' : h < 18 ? '下午好' : h < 23 ? '晚上好' : '夜深了';
+  document.getElementById('greeting').textContent = `${g} · 欢迎回来`;
+}
+tick(); setInterval(tick, 1000);
+
+/* ============ 站点卡片与分组 ============ */
+const tabsEl = document.getElementById('tabs');
+const cardsEl = document.getElementById('cards');
+const emptyHint = document.getElementById('emptyHint');
+let activeGroup = 'all';
+
+function renderTabs(){
+  const list = [{ id:'all', name:'全部' }, ...GROUPS.map(g => ({ id:g.id, name:g.name }))];
+  tabsEl.innerHTML = list.map(g =>
+    `<button data-g="${g.id}" class="tab-btn shrink-0 px-4 py-2 rounded-full border text-[14px] font-medium ${g.id===activeGroup?'tab-active':'tab-idle'}">${g.name}</button>`
+  ).join('');
+  tabsEl.querySelectorAll('button').forEach(btn => btn.addEventListener('click', () => {
+    activeGroup = btn.dataset.g; renderTabs(); renderCards();
+  }));
+}
+
+function cardHTML(it){
+  const external = it.url.startsWith('http');
+  const attrs = external ? 'target="_blank" rel="noopener"' : '';
+  return `<a href="${it.url}" ${attrs} class="group card-hover block rounded-2xl bg-white border border-slate-900/[0.08] p-4">
+    <div class="flex items-start gap-3">
+      <span class="w-[42px] h-[42px] shrink-0 rounded-xl grid place-items-center text-white font-bold text-[16px]" style="background:${it.color}">${it.letter}</span>
+      <div class="min-w-0">
+        <p class="text-[16px] font-bold truncate">${it.name}</p>
+        <p class="text-[13px] text-slate-400 mt-0.5 leading-snug">${it.desc}</p>
+      </div>
+    </div>
+  </a>`;
+}
+
+function renderCards(){
+  let data = ALL_ITEMS;
+  if(activeGroup !== 'all') data = data.filter(i => GROUPS.find(g => g.id===activeGroup).name === i.group);
+  const kw = document.getElementById('search').value.trim().toLowerCase();
+  if(kw) data = ALL_ITEMS.filter(i => (i.name+i.desc+i.group).toLowerCase().includes(kw));
+  emptyHint.classList.toggle('hidden', data.length > 0);
+  cardsEl.innerHTML = data.map(cardHTML).join('');
+}
+
+renderTabs(); renderCards();
+
+document.getElementById('search').addEventListener('input', renderCards);
+document.getElementById('search').addEventListener('keydown', e => {
+  if(e.key === 'Enter'){
+    const kw = e.target.value.trim();
+    if(kw) window.open('https://www.baidu.com/s?wd=' + encodeURIComponent(kw), '_blank');
+  }
+});
+document.getElementById('topSearchBtn').addEventListener('click', () => {
+  const s = document.getElementById('search'); s.scrollIntoView({behavior:'smooth',block:'center'}); s.focus();
+});
+document.addEventListener('keydown', e => {
+  if(e.key === '/' && document.activeElement.tagName !== 'INPUT'){ e.preventDefault(); document.getElementById('search').focus(); }
+});
+
+/* ============ 影视源区块 ============ */
+const FALLBACK = {
+  updated:'—', channel_count:987, stream_count:1002,
+  group_stats:{ 央视:40, 港澳台:9, 体育:3, 新闻:20, 其他:930 },
+  sources:[
+    { url:'countries/cn.m3u', ok:true, entries:155 },
+    { url:'languages/zho.m3u', ok:true, entries:79 },
+    { url:'countries/hk.m3u', ok:true, entries:7 },
+    { url:'countries/tw.m3u', ok:true, entries:6 },
+    { url:'categories/movies.m3u', ok:true, entries:755 },
+  ],
+  _fallback:true
+};
+
+function renderPlaylist(meta){
+  const badge = document.getElementById('playlistBadge');
+  badge.textContent = meta._fallback ? '示例数据（部署后自动同步）' : '已同步 · 自动更新';
+  badge.className = 'text-[13px] px-3 py-1.5 rounded-full border ' +
+    (meta._fallback ? 'bg-slate-100 text-slate-500 border-slate-200' : 'bg-emerald-50 text-emerald-700 border-emerald-200');
+
+  document.getElementById('plChannels').textContent = meta.channel_count ?? '--';
+  document.getElementById('plStreams').textContent = meta.stream_count ?? '--';
+  document.getElementById('plSources').textContent = (meta.sources||[]).filter(s=>s.ok).length;
+  document.getElementById('heroChannels').textContent = meta.stream_count ?? '--';
+  document.getElementById('heroSources').textContent = (meta.sources||[]).filter(s=>s.ok).length;
+  document.getElementById('heroUpdated').textContent = (meta.updated && meta.updated!=='—') ? meta.updated.slice(5,10) : '--';
+  document.getElementById('plUpdated').textContent = '最近更新时间：' + (meta.updated || '—');
+
+  const sub = document.getElementById('subUrl');
+  const base = location.origin + location.pathname.replace(/\/[^/]*$/, '/');
+  sub.value = (location.protocol.startsWith('http') ? base : 'https://你的用户名.github.io/') + 'playlist/all.m3u';
+
+  document.getElementById('sourceList').innerHTML = (meta.sources||[]).map(s => {
+    const ok = s.ok;
+    return `<li class="flex items-center justify-between gap-3">
+      <span class="truncate text-slate-600 mono text-[13px]">${String(s.url).split('/').slice(-2).join('/')}</span>
+      <span class="shrink-0 text-[12px] px-2 py-0.5 rounded-full ${ok?'bg-emerald-50 text-emerald-600':'bg-rose-50 text-rose-500'}">${ok?('+'+s.entries):'失败'}</span>
+    </li>`;
+  }).join('') || '<li class="text-slate-400">暂无源</li>';
+
+  drawChart(meta.group_stats || {});
+}
+
+document.getElementById('copyBtn').addEventListener('click', async () => {
+  const btn = document.getElementById('copyBtn');
+  try{
+    await navigator.clipboard.writeText(document.getElementById('subUrl').value);
+    btn.textContent = '已复制'; setTimeout(()=>btn.textContent='复制', 1600);
+  }catch(e){
+    document.getElementById('subUrl').select(); document.execCommand && document.execCommand('copy');
+    btn.textContent = '已复制'; setTimeout(()=>btn.textContent='复制', 1600);
+  }
+});
+
+/* ============ 图表 ============ */
+let chart;
+function drawChart(stats){
+  const el = document.getElementById('chart');
+  chart = chart || echarts.init(el);
+  const entries = Object.entries(stats).sort((a,b)=>b[1]-a[1]);
+  chart.setOption({
+    grid:{ left:8, right:20, top:16, bottom:8, containLabel:true },
+    tooltip:{ trigger:'axis', axisPointer:{ type:'shadow' } },
+    xAxis:{ type:'value', axisLine:{show:false}, axisTick:{show:false}, splitLine:{ lineStyle:{ color:'rgba(15,23,42,0.06)' } }, axisLabel:{ color:'#94a3b8', fontSize:12 } },
+    yAxis:{ type:'category', data:entries.map(e=>e[0]), axisLine:{ lineStyle:{ color:'rgba(15,23,42,0.12)' } }, axisTick:{show:false}, axisLabel:{ color:'#475569', fontSize:13 } },
+    series:[{
+      type:'bar', barWidth:'52%',
+      data: entries.map(e=>e[1]),
+      itemStyle:{ borderRadius:[0,8,8,0], color: new echarts.graphic.LinearGradient(0,0,1,0,[{offset:0,color:'#1d4ed8'},{offset:1,color:'#0ea5e9'}]) },
+      label:{ show:true, position:'right', color:'#475569', fontSize:12 }
+    }]
+  });
+  window.addEventListener('resize', () => chart && chart.resize());
+}
+
+/* ============ 读取聚合结果 ============ */
+fetch('playlist/meta.json', { cache:'no-store' })
+  .then(r => r.ok ? r.json() : Promise.reject())
+  .then(meta => renderPlaylist(meta))
+  .catch(() => renderPlaylist(FALLBACK));
+</script>
+</body>
+</html>
