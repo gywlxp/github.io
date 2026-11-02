@@ -20,3 +20,10 @@ https://iptv-org.github.io/iptv/countries/tw.m3u
 
 # 影视 / 剧集类分类频道
 https://iptv-org.github.io/iptv/categories/movies.m3u
+# 国内常用公开IPTV源
+https://iptv-org.github.io/iptv/index.m3u
+https://raw.githubusercontent.com/Guovin/TV/main/gather.m3u
+https://iptv.b2og.com/tv.m3u
+https://raw.githubusercontent.com/youshandefeiyang/IPTV/main/main/iptv.m3u
+https://tv.youya.xyz/live.m3u
+
