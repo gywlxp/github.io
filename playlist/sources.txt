@@ -19,14 +19,10 @@ https://iptv-org.github.io/iptv/countries/hk.m3u
 https://iptv-org.github.io/iptv/countries/tw.m3u
 
 # 国内常用公开IPTV源
-# 影视源 / IPTV 播放列表来源（仅收录中国 / 华语电视台）
+https://ghproxy.net/raw.githubusercontent.com/suxuang/myIPTV/main/ipv4.m3u
+https://ghproxy.net/raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/others_output.txt
 https://iptv-org.github.io/iptv/countries/cn.m3u
 https://iptv-org.github.io/iptv/languages/zho.m3u
-https://iptv-org.github.io/iptv/countries/hk.m3u
 https://iptv-org.github.io/iptv/countries/tw.m3u
-https://iptv-org.github.io/iptv/index.m3u
-https://raw.githubusercontent.com/Guovin/TV/main/gather.m3u
-https://iptv.b2og.com/tv.m3u
-https://raw.githubusercontent.com/youshandefeiyang/IPTV/main/main/iptv.m3u
-https://tv.youya.xyz/live.m3u
+https://iptv-org.github.io/iptv/countries/hk.m3u
 
