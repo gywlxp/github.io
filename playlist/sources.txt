@@ -17,8 +17,13 @@ https://iptv-org.github.io/iptv/countries/hk.m3u
 
 # 中国台湾频道
 https://iptv-org.github.io/iptv/countries/tw.m3u
-
+# 电影多仓订阅
+https://github.catvod.com/https://raw.githubusercontent.com/tushen6/Tomorrow/master/lmw.json
 # 国内常用公开IPTV源
+https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv4.m3u
+https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv6.m3u
+https://live.zbds.top/tv/iptv4.m3u
+https://live.zbds.top/tv/iptv6.m3u
 https://ghproxy.net/raw.githubusercontent.com/suxuang/myIPTV/main/ipv4.m3u
 https://ghproxy.net/raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/others_output.txt
 https://iptv-org.github.io/iptv/countries/cn.m3u
