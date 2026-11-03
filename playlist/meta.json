@@ -1,54 +1,58 @@
 {
-  "total_channels": 4886,
-  "total_streams": 6466,
+  "total_channels": 4999,
+  "total_streams": 6539,
   "groups": {
-    "未分类": 5306,
-    "港澳台频道": 108,
+    "未分类": 5047,
+    "地方频道": 247,
+    "港澳台频道": 107,
+    "直播中国": 76,
     "移动IPTV": 69,
     "咪咕央视": 66,
+    "卫视频道": 64,
+    "电影频道": 62,
     "咪咕赛事": 59,
     "央视高清": 54,
     "电视剧频道": 54,
-    "卫视频道": 48,
-    "数字频道": 45,
-    "央视频道": 43,
+    "央视频道": 50,
+    "数字频道": 46,
     "备用频道": 42,
     "春晚频道": 41,
     "港澳代理": 37,
-    "☘️四川频道": 36,
+    "纪录频道": 28,
     "NewTV频道": 27,
-    "埋堆堆频道": 27,
     "☘️河南频道": 26,
-    "虎牙影视": 24,
+    "☘️四川频道": 25,
     "☘️北京频道": 20,
-    "☘️广东频道": 20,
-    "动画频道": 19,
     "☘️辽宁频道": 19,
-    "☘️河北频道": 19,
     "☘️福建频道": 19,
-    "4K频道": 16,
+    "动画频道": 17,
     "☘️湖南频道": 16,
-    "地方频道": 16,
     "IHOT频道": 15,
-    "☘️湖北频道": 15,
-    "APTV专享": 13,
-    "☘️黑龙江频道": 13,
-    "点播电影": 12,
-    "☘️浙江频道": 12,
+    "☘️河北频道": 15,
+    "☘️广东频道": 14,
+    "☘️湖北频道": 14,
+    "4K频道": 13,
     "☘️内蒙古频道": 12,
+    "APTV专享": 11,
     "斗鱼影视": 10,
-    "☘️江苏频道": 10,
-    "☘️陕西频道": 10,
     "☘️上海频道": 9,
+    "☘️陕西频道": 9,
     "General": 8,
+    "儿童频道": 8,
+    "☘️黑龙江频道": 8,
     "News": 7,
+    "☘️江苏频道": 6,
     "☘️海南频道": 6,
     "Sports": 5,
     "Movies": 5,
     "Education": 5,
+    "埋堆堆频道": 5,
+    "☘️浙江频道": 5,
     "Undefined": 3,
     "Music": 3,
     "Lifestyle": 3,
+    "体育频道": 3,
+    "音乐频道": 3,
     "☘️安徽频道": 3,
     "Business": 2,
     "Entertainment": 2,
@@ -57,6 +61,8 @@
     "Kids": 1,
     "Education;Outdoor": 1,
     "Classic": 1,
+    "解说频道": 1,
+    "虎牙影视": 1,
     "国际频道": 1
   },
   "sources": [
@@ -78,6 +84,31 @@
     {
       "url": "https://iptv-org.github.io/iptv/countries/tw.m3u",
       "count": 2,
+      "ok": true
+    },
+    {
+      "url": "https://github.catvod.com/https://raw.githubusercontent.com/tushen6/Tomorrow/master/lmw.json",
+      "count": 0,
+      "ok": true
+    },
+    {
+      "url": "https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv4.m3u",
+      "count": 464,
+      "ok": true
+    },
+    {
+      "url": "https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv6.m3u",
+      "count": 0,
+      "ok": true
+    },
+    {
+      "url": "https://live.zbds.top/tv/iptv4.m3u",
+      "count": 464,
+      "ok": true
+    },
+    {
+      "url": "https://live.zbds.top/tv/iptv6.m3u",
+      "count": 0,
       "ok": true
     },
     {
@@ -111,5 +142,5 @@
       "ok": true
     }
   ],
-  "updated_at": "2026-11-03 02:36:19"
+  "updated_at": "2026-11-03 02:49:45"
 }
