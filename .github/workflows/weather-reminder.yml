@@ -1,0 +1,21 @@
+name: 每日天气提醒
+on:
+  schedule:
+    - cron: '0 23 * * *' # UTC时间23:00 = 北京时间第二天7:00，改时间看下面说明
+  workflow_dispatch: # 允许手动触发测试
+
+jobs:
+  send-weather:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: 安装依赖
+        run: pip install requests
+      - name: 抓取天气并推送
+        env:
+          PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
+          CITY: "石家庄" # 在这里修改要查询的城市，直接写中文城市名即可
+        run: python scripts/weather.py
