@@ -1,22 +1,63 @@
 {
-  "total_channels": 64,
-  "total_streams": 64,
+  "total_channels": 4886,
+  "total_streams": 6466,
   "groups": {
-    "News": 11,
-    "General": 10,
-    "Music": 9,
+    "未分类": 5306,
+    "港澳台频道": 108,
+    "移动IPTV": 69,
+    "咪咕央视": 66,
+    "咪咕赛事": 59,
+    "央视高清": 54,
+    "电视剧频道": 54,
+    "卫视频道": 48,
+    "数字频道": 45,
+    "央视频道": 43,
+    "备用频道": 42,
+    "春晚频道": 41,
+    "港澳代理": 37,
+    "☘️四川频道": 36,
+    "NewTV频道": 27,
+    "埋堆堆频道": 27,
+    "☘️河南频道": 26,
+    "虎牙影视": 24,
+    "☘️北京频道": 20,
+    "☘️广东频道": 20,
+    "动画频道": 19,
+    "☘️辽宁频道": 19,
+    "☘️河北频道": 19,
+    "☘️福建频道": 19,
+    "4K频道": 16,
+    "☘️湖南频道": 16,
+    "地方频道": 16,
+    "IHOT频道": 15,
+    "☘️湖北频道": 15,
+    "APTV专享": 13,
+    "☘️黑龙江频道": 13,
+    "点播电影": 12,
+    "☘️浙江频道": 12,
+    "☘️内蒙古频道": 12,
+    "斗鱼影视": 10,
+    "☘️江苏频道": 10,
+    "☘️陕西频道": 10,
+    "☘️上海频道": 9,
+    "General": 8,
+    "News": 7,
+    "☘️海南频道": 6,
     "Sports": 5,
     "Movies": 5,
     "Education": 5,
-    "Undefined": 5,
-    "Documentary": 3,
+    "Undefined": 3,
+    "Music": 3,
     "Lifestyle": 3,
+    "☘️安徽频道": 3,
     "Business": 2,
     "Entertainment": 2,
+    "Documentary": 2,
     "Culture": 1,
     "Kids": 1,
     "Education;Outdoor": 1,
-    "Classic": 1
+    "Classic": 1,
+    "国际频道": 1
   },
   "sources": [
     {
@@ -40,6 +81,16 @@
       "ok": true
     },
     {
+      "url": "https://ghproxy.net/raw.githubusercontent.com/suxuang/myIPTV/main/ipv4.m3u",
+      "count": 1139,
+      "ok": true
+    },
+    {
+      "url": "https://ghproxy.net/raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/others_output.txt",
+      "count": 8091,
+      "ok": true
+    },
+    {
       "url": "https://iptv-org.github.io/iptv/countries/cn.m3u",
       "count": 39,
       "ok": true
@@ -50,44 +101,15 @@
       "ok": true
     },
     {
-      "url": "https://iptv-org.github.io/iptv/countries/hk.m3u",
-      "count": 2,
-      "ok": true
-    },
-    {
       "url": "https://iptv-org.github.io/iptv/countries/tw.m3u",
       "count": 2,
       "ok": true
     },
     {
-      "url": "https://iptv-org.github.io/iptv/index.m3u",
-      "count": 64,
+      "url": "https://iptv-org.github.io/iptv/countries/hk.m3u",
+      "count": 2,
       "ok": true
-    },
-    {
-      "url": "https://raw.githubusercontent.com/Guovin/TV/main/gather.m3u",
-      "count": 0,
-      "ok": false,
-      "error": "HTTP Error 404: Not Found"
-    },
-    {
-      "url": "https://iptv.b2og.com/tv.m3u",
-      "count": 0,
-      "ok": false,
-      "error": "HTTP Error 404: Not Found"
-    },
-    {
-      "url": "https://raw.githubusercontent.com/youshandefeiyang/IPTV/main/main/iptv.m3u",
-      "count": 0,
-      "ok": false,
-      "error": "HTTP Error 404: Not Found"
-    },
-    {
-      "url": "https://tv.youya.xyz/live.m3u",
-      "count": 0,
-      "ok": false,
-      "error": "<urlopen error [Errno -2] Name or service not known>"
     }
   ],
-  "updated_at": "2026-11-03 02:27:37"
+  "updated_at": "2026-11-03 02:29:37"
 }
