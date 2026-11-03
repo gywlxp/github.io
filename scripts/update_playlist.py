@@ -37,6 +37,7 @@ import json
 import re
 import sys
 import urllib.error
+import urllib.parse
 import urllib.request
 from collections import OrderedDict
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -95,9 +96,23 @@ def is_cn_channel(name):
     return any(kw in upper for kw in CN_KEYWORDS)
 
 
+def encode_url(url):
+    """对URL里含中文/非ASCII字符的路径与查询部分做百分号编码，避免 ascii 报错。"""
+    try:
+        parts = urllib.parse.urlsplit(url)
+    except Exception:
+        return url
+    encoded_path = urllib.parse.quote(parts.path, safe="/%:@!$&'()*+,;=-._~")
+    encoded_query = urllib.parse.quote(parts.query, safe="=&%:@!$&'()*+,;=-._~?/")
+    return urllib.parse.urlunsplit(
+        (parts.scheme, parts.netloc, encoded_path, encoded_query, parts.fragment)
+    )
+
+
 def fetch(url, timeout=20):
     """下载文本内容，失败返回 None 并打印原因。"""
-    req = urllib.request.Request(url, headers={"User-Agent": UA})
+    safe_url = encode_url(url)
+    req = urllib.request.Request(safe_url, headers={"User-Agent": UA})
     try:
         with urllib.request.urlopen(req, timeout=timeout) as resp:
             charset = resp.headers.get_content_charset() or "utf-8"
@@ -223,8 +238,9 @@ def guess_group(name):
 
 def probe(url, timeout=6):
     """轻量连通性检测：HEAD 优先，必要时回退 GET 读取少量字节。"""
+    safe_url = encode_url(url)
     for method in ("HEAD", "GET"):
-        req = urllib.request.Request(url, headers={"User-Agent": UA}, method=method)
+        req = urllib.request.Request(safe_url, headers={"User-Agent": UA}, method=method)
         try:
             with urllib.request.urlopen(req, timeout=timeout) as resp:
                 status = getattr(resp, "status", 200)
