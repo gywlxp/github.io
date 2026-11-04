@@ -758,7 +758,7 @@ http://bp-resource-dfl.bestv.cn/148/3/video.m3u8
 #EXTINF:-1 group-title="卫视频道",东方卫视 线路2
 http://bp-resource-dfl.bestv.cn/155/3/video.m3u8
 #EXTINF:-1 group-title="卫视频道",东方卫视4K
-https://bp-resource-dfl.bestv.cn/148/3/video.m3u8
+http://bp-resource-dfl.bestv.cn/148/3/video.m3u8
 #EXTINF:-1 group-title="卫视频道",人间卫视
 https://5ddce30eb4b55.streamlock.net/bltvhd/bltv1/chunklist_w511254805.m3u8
 #EXTINF:-1 group-title="卫视频道",兵团卫视
@@ -3460,7 +3460,7 @@ http://63.141.230.178:82/gslb/zbdq5.m3u8?id=dfwshd
 #EXTINF:-1 group-title="未分类",东方卫视 线路3
 http://42.94.209.140:7788/651632648
 #EXTINF:-1 group-title="未分类",东方卫视4K
-https://bp-resource-dfl.bestv.cn/148/3/video.m3u8
+http://bp-resource-dfl.bestv.cn/148/3/video.m3u8
 #EXTINF:-1 group-title="未分类",东方卫视国际频道 线路1
 http://aktv-stream.m16tv.cfd/stream/aktv3/null/AKTV.m3u8
 #EXTINF:-1 group-title="未分类",东方卫视国际频道 线路2
@@ -6318,7 +6318,7 @@ https://vip.ffzy-play1.com/20221018/512_4544d0ed/index.m3u8
 #EXTINF:-1 group-title="未分类",我就问你这瓜保熟吗
 http://live.nctv.top/huya.php?id=11601970
 #EXTINF:-1 group-title="未分类",我是特种兵之利刃出鞘
-http://1.94.31.214:35455/yy/37999586
+https://live.ottiptv.cc/yy/37999586
 #EXTINF:-1 group-title="未分类",我是谁
 https://vip.ffzy-play6.com/20221022/881_da82c5bb/index.m3u8
 #EXTINF:-1 group-title="未分类",我的体育老师
@@ -9018,7 +9018,7 @@ http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226508/index.m3u8
 #EXTINF:-1 group-title="未分类",睢宁三农
 http://iptv.666230.xyz/iptv/jsyd.php/xzsnsn
 #EXTINF:-1 group-title="未分类",睢宁综合
-http://iptv.666230.xyz/iptv/jsyd.php/xzsnzh
+https://live-auth.51kandianshi.com/szgd/csztv4k_hd.m3u8
 #EXTINF:-1 group-title="未分类",睢宁资讯
 http://iptv.666230.xyz/iptv/jsyd.php/xzsnzx
 #EXTINF:-1 group-title="未分类",石家庄娱乐 线路1
@@ -11390,7 +11390,7 @@ http://r.jdshipin.com/n2YZI
 #EXTINF:-1 group-title="港澳代理",珠江卫视
 http://iptv.4666888.xyz/iptv2A.php?id=19
 #EXTINF:-1 group-title="港澳代理",美亚电影
-http://iptv.4666888.xyz/iptv2A.php?id=30
+http://aktv.top/AKTV/live/aktv/hk-1/AKTV.m3u8
 #EXTINF:-1 group-title="港澳代理",翡翠台 线路1
 http://r.jdshipin.com/qClQf
 #EXTINF:-1 group-title="港澳代理",翡翠台 线路2
@@ -11582,7 +11582,7 @@ http://61.221.215.25:8800/hls/48/index.m3u8
 #EXTINF:-1 group-title="港澳台频道",美亚C+
 http://ottproxy2.ist.ooo/livehls/MOB-U1-NO/03.m3u8
 #EXTINF:-1 group-title="港澳台频道",美亚电影
-http://ali.hlspull.yximgs.com/live/awei_mydy.flv
+http://aktv.top/AKTV/live/aktv/hk-1/AKTV.m3u8
 #EXTINF:-1 group-title="港澳台频道",美亚电影台
 http://php.jdshipin.com:8880/smt.php?id=meiyamovie_twn
 #EXTINF:-1 group-title="港澳台频道",翡翠台
@@ -11596,7 +11596,7 @@ https://v3.mediacast.hk/webcast/bshdlive-pc/chunklist_w99771165.m3u8
 #EXTINF:-1 group-title="港澳台频道",莲花卫视
 http://live-hls.macaulotustv.com/lotustv/macaulotustv.m3u8
 #EXTINF:-1 group-title="港澳台频道",靖天电影
-http://live4play.uk/livehttpplay?channel_id=12037
+http://aktv.top/AKTV/live/aktv/null-6/AKTV.m3u8
 #EXTINF:-1 group-title="港澳台频道",香港卫视
 http://webcast.hkstv.tv/livestream/mutfysrq/playlist.m3u8
 #EXTINF:-1 group-title="港澳台频道",龙华偶像
