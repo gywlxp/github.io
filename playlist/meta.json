@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-04 11:03:53",
-  "updated_iso": "2026-11-04T11:03:53+08:00",
+  "updated": "2026-11-04 11:09:08",
+  "updated_iso": "2026-11-04T11:09:08+08:00",
   "sources": [
     {
       "url": "https://iptv-org.github.io/iptv/countries/cn.m3u",
@@ -85,9 +85,9 @@
   "unmatched": [],
   "stale_channels": [],
   "channel_count": 68,
-  "stream_count": 261,
+  "stream_count": 260,
   "group_stats": {
-    "📺央视频道": 98,
+    "📺央视频道": 97,
     "📡卫视频道": 126,
     "🌊港·澳·台": 15,
     "🎬电影频道": 22
