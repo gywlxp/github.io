@@ -40,7 +40,7 @@ http://8.138.7.223/tv/cctvnews.php?id=cctv4
 #EXTINF:-1 group-title="📺央视频道",CCTV-4
 http://107.150.60.122/live/cctv4hd.m3u8
 #EXTINF:-1 group-title="📺央视频道",CCTV-4
-http://207.56.13.146:81/cdnlive/cctv4.m3u8
+http://107.150.60.122/live/cctv4hd.m3u8
 #EXTINF:-1 group-title="📺央视频道",CCTV-4
 http://173.208.212.130:8181/1080p/cctv4.m3u8
 #EXTINF:-1 group-title="📺央视频道",CCTV-4
@@ -50,7 +50,7 @@ http://107.150.60.122/live/cctv5hd.m3u8
 #EXTINF:-1 group-title="📺央视频道",CCTV-5
 http://8.138.7.223/tv/api.php?id=cctv5
 #EXTINF:-1 group-title="📺央视频道",CCTV-5
-http://207.56.13.146:81/cdnlive/cctv5.m3u8
+http://107.150.60.122/live/cctv5hd.m3u8
 #EXTINF:-1 group-title="📺央视频道",CCTV-5
 http://107.150.60.122/live/cctv5hd.m3u8
 #EXTINF:-1 group-title="📺央视频道",CCTV-5+
@@ -80,7 +80,7 @@ http://192.151.150.154/live/cctv7hd.m3u8
 #EXTINF:-1 group-title="📺央视频道",CCTV-7
 http://63.141.230.178:82/gslb/zbdq5.m3u8?id=cctv7hd
 #EXTINF:-1 group-title="📺央视频道",CCTV-7
-http://207.56.13.146:81/cdnlive/cctv7.m3u8
+http://107.150.60.122/live/cctv7hd.m3u8
 #EXTINF:-1 group-title="📺央视频道",CCTV-7
 http://107.150.60.122/live/cctv7hd.m3u8
 #EXTINF:-1 group-title="📺央视频道",CCTV-8
@@ -188,7 +188,7 @@ http://63.141.230.178:82/gslb/zbdq5.m3u8?id=fyyy
 #EXTINF:-1 group-title="📺央视频道",风云音乐
 http://38.75.136.137:98/gslb/dsdqpub/fyyy.m3u8?auth=testpub
 #EXTINF:-1 group-title="📺央视频道",风云音乐
-http://207.56.13.146:81/cdnlive/fyyy.m3u8
+https://live.264788.xyz/channel/fengyunyinyue?streamid=1b41fb9153cba3ee19bd5d1b323da27e&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk
 #EXTINF:-1 group-title="📺央视频道",世界地理
 http://63.141.230.178:82/gslb/zbdq5.m3u8?id=sjdl
 #EXTINF:-1 group-title="📺央视频道",世界地理
