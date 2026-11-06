@@ -1,11 +1,11 @@
 {
-  "updated": "2026-11-06 01:56:11",
-  "updated_iso": "2026-11-06T01:56:11+08:00",
+  "updated": "2026-11-06 10:00:35",
+  "updated_iso": "2026-11-06T10:00:35+08:00",
   "sources": [
     {
       "url": "https://iptv-org.github.io/iptv/countries/cn.m3u",
       "ok": true,
-      "entries": 155
+      "entries": 154
     },
     {
       "url": "https://iptv-org.github.io/iptv/languages/zho.m3u",
@@ -30,7 +30,7 @@
     {
       "url": "https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv4.m3u",
       "ok": true,
-      "entries": 405
+      "entries": 32
     },
     {
       "url": "https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv6.m3u",
@@ -50,12 +50,12 @@
     {
       "url": "https://ghproxy.net/raw.githubusercontent.com/suxuang/myIPTV/main/ipv4.m3u",
       "ok": true,
-      "entries": 964
+      "entries": 1093
     },
     {
       "url": "https://ghproxy.net/raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/others_output.txt",
       "ok": true,
-      "entries": 5839
+      "entries": 6037
     },
     {
       "url": "https://iptv-org.github.io/iptv/countries/cn.m3u",
@@ -78,12 +78,15 @@
       "entries": 0
     }
   ],
-  "fetched_raw": 12384,
+  "fetched_raw": 11628,
   "probe_enabled": true,
   "mode": "baseline",
   "baseline": "playlist/all.m3u",
   "unmatched": [],
-  "stale_channels": [],
+  "stale_channels": [
+    "CCTV-5+",
+    "碟中谍系列电影"
+  ],
   "channel_count": 68,
   "stream_count": 259,
   "group_stats": {
