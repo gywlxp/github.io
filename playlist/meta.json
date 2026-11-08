@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-08 00:14:00",
-  "updated_iso": "2026-11-08T00:14:00+08:00",
+  "updated": "2026-11-08 09:08:45",
+  "updated_iso": "2026-11-08T09:08:45+08:00",
   "sources": [
     {
       "url": "https://iptv-org.github.io/iptv/countries/cn.m3u",
@@ -50,12 +50,12 @@
     {
       "url": "https://ghproxy.net/raw.githubusercontent.com/suxuang/myIPTV/main/ipv4.m3u",
       "ok": true,
-      "entries": 959
+      "entries": 958
     },
     {
       "url": "https://ghproxy.net/raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/others_output.txt",
       "ok": true,
-      "entries": 6463
+      "entries": 6466
     },
     {
       "url": "https://iptv-org.github.io/iptv/countries/cn.m3u",
@@ -78,7 +78,7 @@
       "entries": 0
     }
   ],
-  "fetched_raw": 13481,
+  "fetched_raw": 13479,
   "probe_enabled": true,
   "mode": "baseline",
   "baseline": "playlist/all.m3u",
