@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-08 09:08:45",
-  "updated_iso": "2026-11-08T09:08:45+08:00",
+  "updated": "2026-11-09 00:34:59",
+  "updated_iso": "2026-11-09T00:34:59+08:00",
   "sources": [
     {
       "url": "https://iptv-org.github.io/iptv/countries/cn.m3u",
@@ -30,7 +30,7 @@
     {
       "url": "https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv4.m3u",
       "ok": true,
-      "entries": 427
+      "entries": 426
     },
     {
       "url": "https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv6.m3u",
@@ -50,12 +50,12 @@
     {
       "url": "https://ghproxy.net/raw.githubusercontent.com/suxuang/myIPTV/main/ipv4.m3u",
       "ok": true,
-      "entries": 958
+      "entries": 957
     },
     {
       "url": "https://ghproxy.net/raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/others_output.txt",
       "ok": true,
-      "entries": 6466
+      "entries": 6451
     },
     {
       "url": "https://iptv-org.github.io/iptv/countries/cn.m3u",
@@ -78,13 +78,14 @@
       "entries": 0
     }
   ],
-  "fetched_raw": 13479,
+  "fetched_raw": 13377,
   "probe_enabled": true,
   "mode": "baseline",
   "baseline": "playlist/all.m3u",
   "unmatched": [],
   "stale_channels": [
-    "CCTV-5+"
+    "CCTV-5+",
+    "林正英经典"
   ],
   "channel_count": 68,
   "stream_count": 259,
