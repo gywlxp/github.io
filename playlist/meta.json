@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-09 00:34:59",
-  "updated_iso": "2026-11-09T00:34:59+08:00",
+  "updated": "2026-11-09 09:28:44",
+  "updated_iso": "2026-11-09T09:28:44+08:00",
   "sources": [
     {
       "url": "https://iptv-org.github.io/iptv/countries/cn.m3u",
@@ -10,7 +10,7 @@
     {
       "url": "https://iptv-org.github.io/iptv/languages/zho.m3u",
       "ok": true,
-      "entries": 80
+      "entries": 79
     },
     {
       "url": "https://iptv-org.github.io/iptv/countries/hk.m3u",
@@ -78,15 +78,12 @@
       "entries": 0
     }
   ],
-  "fetched_raw": 13377,
+  "fetched_raw": 13375,
   "probe_enabled": true,
   "mode": "baseline",
   "baseline": "playlist/all.m3u",
   "unmatched": [],
-  "stale_channels": [
-    "CCTV-5+",
-    "林正英经典"
-  ],
+  "stale_channels": [],
   "channel_count": 68,
   "stream_count": 259,
   "group_stats": {
