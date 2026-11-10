@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-10 11:58:30",
-  "updated_iso": "2026-11-10T11:58:30+08:00",
+  "updated": "2026-11-11 01:37:21",
+  "updated_iso": "2026-11-11T01:37:21+08:00",
   "sources": [
     {
       "url": "https://iptv-org.github.io/iptv/countries/cn.m3u",
@@ -30,7 +30,7 @@
     {
       "url": "https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv4.m3u",
       "ok": true,
-      "entries": 420
+      "entries": 311
     },
     {
       "url": "https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv6.m3u",
@@ -50,12 +50,12 @@
     {
       "url": "https://ghproxy.net/raw.githubusercontent.com/suxuang/myIPTV/main/ipv4.m3u",
       "ok": true,
-      "entries": 959
+      "entries": 1053
     },
     {
       "url": "https://ghproxy.net/raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/others_output.txt",
       "ok": true,
-      "entries": 5941
+      "entries": 6468
     },
     {
       "url": "https://iptv-org.github.io/iptv/countries/cn.m3u",
@@ -78,13 +78,12 @@
       "entries": 0
     }
   ],
-  "fetched_raw": 12925,
+  "fetched_raw": 13205,
   "probe_enabled": true,
   "mode": "baseline",
   "baseline": "playlist/all.m3u",
   "unmatched": [],
   "stale_channels": [
-    "CCTV-5+",
     "香港卫视"
   ],
   "channel_count": 68,
