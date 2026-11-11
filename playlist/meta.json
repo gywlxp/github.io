@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-11 09:44:11",
-  "updated_iso": "2026-11-11T09:44:11+08:00",
+  "updated": "2026-11-12 01:48:50",
+  "updated_iso": "2026-11-12T01:48:50+08:00",
   "sources": [
     {
       "url": "https://iptv-org.github.io/iptv/countries/cn.m3u",
@@ -55,7 +55,7 @@
     {
       "url": "https://ghproxy.net/raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/others_output.txt",
       "ok": true,
-      "entries": 6450
+      "entries": 6473
     },
     {
       "url": "https://iptv-org.github.io/iptv/countries/cn.m3u",
@@ -78,19 +78,15 @@
       "entries": 0
     }
   ],
-  "fetched_raw": 13435,
+  "fetched_raw": 13694,
   "probe_enabled": true,
   "mode": "baseline",
   "baseline": "playlist/all.m3u",
   "unmatched": [],
   "stale_channels": [
     "CCTV-5+",
-    "CCTV-5+",
-    "CCTV-13",
     "香港卫视",
-    "黑龙江卫视",
-    "广西卫视",
-    "海南卫视"
+    "林正英经典"
   ],
   "channel_count": 68,
   "stream_count": 244,
