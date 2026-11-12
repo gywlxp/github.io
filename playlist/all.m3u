@@ -16,7 +16,7 @@ http://204.12.221.218:8181/3m1080p/cctv2.m3u8
 #EXTINF:-1 group-title="📺央视频道",CCTV-2
 http://8.138.7.223/tv/api.php?id=cctv2
 #EXTINF:-1 group-title="📺央视频道",CCTV-2
-http://bztv.tvbus.cc:8081/cdnlive/cctv2.m3u8
+http://204.12.221.218:8181/3m1080p/cctv2.m3u8
 #EXTINF:-1 group-title="📺央视频道",CCTV-2
 http://198.204.228.26/live/cctv2hd.m3u8
 #EXTINF:-1 group-title="📺央视频道",CCTV-2
