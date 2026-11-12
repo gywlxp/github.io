@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-12 10:44:00",
-  "updated_iso": "2026-11-12T10:44:00+08:00",
+  "updated": "2026-11-13 02:02:12",
+  "updated_iso": "2026-11-13T02:02:12+08:00",
   "sources": [
     {
       "url": "https://iptv-org.github.io/iptv/countries/cn.m3u",
@@ -30,7 +30,7 @@
     {
       "url": "https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv4.m3u",
       "ok": true,
-      "entries": 422
+      "entries": 423
     },
     {
       "url": "https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv6.m3u",
@@ -50,12 +50,12 @@
     {
       "url": "https://ghproxy.net/raw.githubusercontent.com/suxuang/myIPTV/main/ipv4.m3u",
       "ok": true,
-      "entries": 962
+      "entries": 965
     },
     {
       "url": "https://ghproxy.net/raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/others_output.txt",
       "ok": true,
-      "entries": 6474
+      "entries": 6553
     },
     {
       "url": "https://iptv-org.github.io/iptv/countries/cn.m3u",
@@ -78,7 +78,7 @@
       "entries": 0
     }
   ],
-  "fetched_raw": 13688,
+  "fetched_raw": 13846,
   "probe_enabled": true,
   "mode": "baseline",
   "baseline": "playlist/all.m3u",
@@ -88,7 +88,7 @@
     "CCTV-8",
     "CCTV-16",
     "香港卫视",
-    "林正英经典"
+    "云南卫视"
   ],
   "channel_count": 68,
   "stream_count": 244,
