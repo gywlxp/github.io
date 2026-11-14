@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-14 10:00:07",
-  "updated_iso": "2026-11-14T10:00:07+08:00",
+  "updated": "2026-11-15 00:28:33",
+  "updated_iso": "2026-11-15T00:28:33+08:00",
   "sources": [
     {
       "url": "https://iptv-org.github.io/iptv/countries/cn.m3u",
@@ -30,7 +30,7 @@
     {
       "url": "https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv4.m3u",
       "ok": true,
-      "entries": 422
+      "entries": 426
     },
     {
       "url": "https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv6.m3u",
@@ -78,26 +78,21 @@
       "entries": 0
     }
   ],
-  "fetched_raw": 1728,
+  "fetched_raw": 1736,
   "probe_enabled": true,
   "mode": "baseline",
   "baseline": "playlist/all.m3u",
   "unmatched": [],
   "stale_channels": [
-    "香港卫视",
-    "黑龙江卫视",
-    "黑龙江卫视",
-    "河北卫视",
-    "河南卫视",
-    "河南卫视",
-    "云南卫视"
+    "香港卫视"
   ],
   "channel_count": 68,
-  "stream_count": 244,
+  "stream_count": 262,
   "group_stats": {
-    "📺央视频道": 97,
-    "📡卫视频道": 110,
-    "🌊港·澳·台": 15,
+    "🌊港·澳·台": 10,
+    "📺央视频道": 98,
+    "💰央视付费频道": 5,
+    "📡卫视频道": 127,
     "🎬电影频道": 22
   }
 }
