@@ -15,6 +15,27 @@
 #     这 17 条已逐条实测：播放列表都能取到（无加密、无 token、分片是相对路径）
 #     播放器的接口里还给每个台配了备用线路（kcdnvip / bdydns），主线路不行再换
 # =====================================================================
+#EXTINF:-1 tvg-id="凤凰中文" tvg-name="凤凰中文" tvg-logo="https://www.xn--rgv465a.top/tvlogo/凤凰中文.png" group-title="🌊港·澳·台",凤凰中文
+http://bobohome.ignorelist.com:20247/fengshows?id=2.m3u8
+http://8.138.7.223/tv/fengshows.php?id=fhzw
+http://43.152.224.209/qctv.fengshows.cn/live/0701pcc72.flv
+https://7612-5516-affc-d88b.kylintv.tv/live/pxinhd_iphone.m3u8
+#EXTINF:-1 tvg-id="凤凰资讯" tvg-name="凤凰资讯" tvg-logo="https://live.fanmingming.cn/tv/凤凰卫视资讯台.png" group-title="🌊港·澳·台",凤凰资讯
+http://173.208.234.146/live/fhzx.m3u8
+http://8.138.7.223/tv/fengshows.php?id=fhzx
+http://43.152.224.209/qctv.fengshows.cn/live/0701pin72.flv
+http://r.jdshipin.com/0Rp07
+http://php.jdshipin.com/TVOD/iptv.php?id=fhzx
+https://cdn6.163189.xyz/163189/fhzx
+https://hls-gateway.vpstv.net/streams/476958.m3u8
+#EXTINF:-1 tvg-id="凤凰香港" tvg-name="凤凰香港" tvg-logo="https://gitee.com/suxuang/logo/raw/master/mylogo/凤凰香港台.png" group-title="🌊港·澳·台",凤凰香港
+http://173.208.234.146/live/fhxg.m3u8
+http://8.138.7.223/tv/fengshows.php?id=fhhk
+http://r.jdshipin.com/NfC0f
+http://php.jdshipin.com/TVOD/iptv.php?id=fhhk
+https://cdn6.163189.xyz/163189/fhhk
+https://epg.pw/stream/5f16dc7fc8aaaed3205516c63e4a8c24bca9dbba1181684244729cf574505b0e.m3u8
+
 #EXTINF:-1 tvg-id="CCTV-1" tvg-name="CCTV-1" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-1.png" group-title="📺央视频道",CCTV-1
 http://63.141.230.178:82/gslb/zbdq5.m3u8?id=cctv1hd
 http://8.138.7.223/tv/api.php?id=cctv1
@@ -47,7 +68,6 @@ http://38.75.136.137:98/gslb/dsdqpub/cctv4k.m3u8?auth=testpub
 http://107.150.60.122/live/cctv5hd.m3u8
 http://8.138.7.223/tv/api.php?id=cctv5
 http://207.56.13.146:81/cdnlive/cctv5.m3u8
-
 http://112.30.73.119:9901/tsfile/live/0005_2.m3u8?key=txiptv&playlive=0&authid=0
 http://173.208.212.130:8181/720p/cctv5.m3u8
 #EXTINF:-1 tvg-id="CCTV-5+" tvg-name="CCTV-5+" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CCTV-5+.png" group-title="📺央视频道",CCTV-5+
@@ -299,27 +319,6 @@ http://63.141.230.178:82/gslb/zbdq5.m3u8?id=ynwshd
 http://192.151.150.154/live/ynwshd.m3u8
 http://107.150.60.122/live/ynwshd.m3u8
 http://120.76.248.139/live/bfgd/4200000482.m3u8
-
-#EXTINF:-1 tvg-id="凤凰中文" tvg-name="凤凰中文" tvg-logo="https://www.xn--rgv465a.top/tvlogo/凤凰中文.png" group-title="🌊港·澳·台",凤凰中文
-http://bobohome.ignorelist.com:20247/fengshows?id=2.m3u8
-http://8.138.7.223/tv/fengshows.php?id=fhzw
-http://43.152.224.209/qctv.fengshows.cn/live/0701pcc72.flv
-https://7612-5516-affc-d88b.kylintv.tv/live/pxinhd_iphone.m3u8
-#EXTINF:-1 tvg-id="凤凰资讯" tvg-name="凤凰资讯" tvg-logo="https://live.fanmingming.cn/tv/凤凰卫视资讯台.png" group-title="🌊港·澳·台",凤凰资讯
-http://173.208.234.146/live/fhzx.m3u8
-http://8.138.7.223/tv/fengshows.php?id=fhzx
-http://43.152.224.209/qctv.fengshows.cn/live/0701pin72.flv
-http://r.jdshipin.com/0Rp07
-http://php.jdshipin.com/TVOD/iptv.php?id=fhzx
-https://cdn6.163189.xyz/163189/fhzx
-https://hls-gateway.vpstv.net/streams/476958.m3u8
-#EXTINF:-1 tvg-id="凤凰香港" tvg-name="凤凰香港" tvg-logo="https://gitee.com/suxuang/logo/raw/master/mylogo/凤凰香港台.png" group-title="🌊港·澳·台",凤凰香港
-http://173.208.234.146/live/fhxg.m3u8
-http://8.138.7.223/tv/fengshows.php?id=fhhk
-http://r.jdshipin.com/NfC0f
-http://php.jdshipin.com/TVOD/iptv.php?id=fhhk
-https://cdn6.163189.xyz/163189/fhhk
-https://epg.pw/stream/5f16dc7fc8aaaed3205516c63e4a8c24bca9dbba1181684244729cf574505b0e.m3u8
 
 #EXTINF:-1 tvg-id="CHC家庭影院" tvg-name="CHC家庭影院" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CHC家庭影院.png" group-title="🎬电影频道",CHC家庭影院
 http://198.204.228.26/live/chcjt.m3u8
