@@ -1,49 +1,29 @@
-#EXTM3U
 #EXTINF:-1 group-title="📺央视频道",CCTV-1
 http://63.141.230.178:82/gslb/zbdq5.m3u8?id=cctv1hd
-#EXTINF:-1 group-title="📺央视频道",CCTV-1
 http://8.138.7.223/tv/api.php?id=cctv1
-#EXTINF:-1 group-title="📺央视频道",CCTV-1
 http://38.75.136.137:98/gslb/dsdqbv/cctv1hd.m3u8?auth=test20251009
-#EXTINF:-1 group-title="📺央视频道",CCTV-1
 http://204.12.221.218:8181/3m1080p/cctv1.m3u8
-#EXTINF:-1 group-title="📺央视频道",CCTV-1
 http://74.91.26.218:82/live/cctv1hd.m3u8
-#EXTINF:-1 group-title="📺央视频道",CCTV-1
 http://198.204.228.26/live/cctv1hd.m3u8
 #EXTINF:-1 group-title="📺央视频道",CCTV-2
 http://204.12.221.218:8181/3m1080p/cctv2.m3u8
-#EXTINF:-1 group-title="📺央视频道",CCTV-2
 http://8.138.7.223/tv/api.php?id=cctv2
-#EXTINF:-1 group-title="📺央视频道",CCTV-2
 http://204.12.221.218:8181/3m1080p/cctv2.m3u8
 #EXTINF:-1 group-title="📺央视频道",CCTV-2
 http://198.204.228.26/live/cctv2hd.m3u8
-#EXTINF:-1 group-title="📺央视频道",CCTV-2
 http://192.151.150.154/live/cctv2hd.m3u8
-#EXTINF:-1 group-title="📺央视频道",CCTV-2
 http://107.150.60.122/live/cctv2hd.m3u8
 #EXTINF:-1 group-title="📺央视频道",CCTV-3
 http://63.141.230.178:82/gslb/zbdq5.m3u8?id=cctv3hd
-#EXTINF:-1 group-title="📺央视频道",CCTV-3
 http://107.150.60.122/live/cctv3hd.m3u8
-#EXTINF:-1 group-title="📺央视频道",CCTV-3
 http://74.91.26.218:82/live/cctv3hd.m3u8
-#EXTINF:-1 group-title="📺央视频道",CCTV-3
 http://69.30.245.50/live/cctv3.m3u8
 #EXTINF:-1 group-title="📺央视频道",CCTV-4
 http://74.91.26.218:82/live/cctv4hd.m3u8
-#EXTINF:-1 group-title="📺央视频道",CCTV-4
 http://192.151.150.154/live/cctv4hd.m3u8
-#EXTINF:-1 group-title="📺央视频道",CCTV-4
-http://8.138.7.223/tv/cctvnews.php?id=cctv4
-#EXTINF:-1 group-title="📺央视频道",CCTV-4
 http://107.150.60.122/live/cctv4hd.m3u8
-#EXTINF:-1 group-title="📺央视频道",CCTV-4
 http://107.150.60.122/live/cctv4hd.m3u8
-#EXTINF:-1 group-title="📺央视频道",CCTV-4
 http://173.208.212.130:8181/1080p/cctv4.m3u8
-#EXTINF:-1 group-title="📺央视频道",CCTV-4
 http://38.75.136.137:98/gslb/dsdqpub/cctv4k.m3u8?auth=testpub
 #EXTINF:-1 group-title="📺央视频道",CCTV-5
 http://107.150.60.122/live/cctv5hd.m3u8
