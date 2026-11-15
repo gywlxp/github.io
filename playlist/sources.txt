@@ -4,19 +4,6 @@
 # 以 # 开头的行是注释，不会被抓取。
 # 想扩充频道，往下面追加你找到的公开源地址即可。
 # ---------------------------------------------------------------
-
-# iptv-org：全球最大的公开 IPTV 聚合项目
-# 中国大陆频道
-https://iptv-org.github.io/iptv/countries/cn.m3u
-
-# 中文（华语）语种频道汇总
-https://iptv-org.github.io/iptv/languages/zho.m3u
-
-# 中国香港频道
-https://iptv-org.github.io/iptv/countries/hk.m3u
-
-# 中国台湾频道
-https://iptv-org.github.io/iptv/countries/tw.m3u
 # 电影多仓订阅
 https://github.catvod.com/https://raw.githubusercontent.com/tushen6/Tomorrow/master/lmw.json
 # 国内常用公开IPTV源
