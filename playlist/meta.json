@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-16 09:36:23",
-  "updated_iso": "2026-11-16T09:36:23+08:00",
+  "updated": "2026-11-17 04:11:03",
+  "updated_iso": "2026-11-17T04:11:03+08:00",
   "sources": [
     {
       "url": "https://github.catvod.com/https://raw.githubusercontent.com/tushen6/Tomorrow/master/lmw.json",
@@ -10,7 +10,7 @@
     {
       "url": "https://ghproxy.net/raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.txt",
       "ok": true,
-      "entries": 510
+      "entries": 432
     },
     {
       "url": "https://ghproxy.net/raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u",
@@ -30,7 +30,7 @@
     {
       "url": "https://ghproxy.net/raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/others_output.txt",
       "ok": true,
-      "entries": 6809
+      "entries": 6880
     },
     {
       "url": "https://iptv-org.github.io/iptv/countries/cn.m3u",
@@ -53,15 +53,13 @@
       "entries": 7
     }
   ],
-  "fetched_raw": 12624,
+  "fetched_raw": 12414,
   "probe_enabled": true,
   "mode": "baseline",
   "baseline": "playlist/all.m3u",
   "unmatched": [],
   "stale_channels": [
-    "CCTV-14",
-    "CCTV-15",
-    "CCTV-15",
+    "CCTV-11",
     "香港卫视",
     "香港卫视",
     "香港卫视",
