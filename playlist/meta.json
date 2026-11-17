@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-17 12:22:16",
-  "updated_iso": "2026-11-17T12:22:16+08:00",
+  "updated": "2026-11-18 03:01:43",
+  "updated_iso": "2026-11-18T03:01:43+08:00",
   "sources": [
     {
       "url": "https://github.catvod.com/https://raw.githubusercontent.com/tushen6/Tomorrow/master/lmw.json",
@@ -9,18 +9,18 @@
     },
     {
       "url": "https://ghproxy.net/raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.txt",
-      "ok": false,
-      "entries": 0
+      "ok": true,
+      "entries": 535
     },
     {
       "url": "https://ghproxy.net/raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u",
-      "ok": false,
-      "entries": 0
+      "ok": true,
+      "entries": 449
     },
     {
       "url": "https://live.zbds.top/tv/iptv4.m3u",
       "ok": true,
-      "entries": 431
+      "entries": 0
     },
     {
       "url": "https://live.zbds.top/tv/iptv6.m3u",
@@ -29,23 +29,23 @@
     },
     {
       "url": "https://ghproxy.net/raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/others_output.txt",
-      "ok": false,
-      "entries": 0
+      "ok": true,
+      "entries": 6815
     },
     {
       "url": "https://iptv-org.github.io/iptv/countries/cn.m3u",
       "ok": true,
-      "entries": 153
+      "entries": 8
     },
     {
       "url": "https://iptv-org.github.io/iptv/languages/zho.m3u",
       "ok": true,
-      "entries": 79
+      "entries": 61
     },
     {
       "url": "https://iptv-org.github.io/iptv/countries/tw.m3u",
       "ok": true,
-      "entries": 7
+      "entries": 5
     },
     {
       "url": "https://iptv-org.github.io/iptv/countries/hk.m3u",
@@ -53,15 +53,12 @@
       "entries": 7
     }
   ],
-  "fetched_raw": 870,
+  "fetched_raw": 12588,
   "probe_enabled": true,
   "mode": "baseline",
   "baseline": "playlist/all.m3u",
   "unmatched": [],
   "stale_channels": [
-    "CCTV-6",
-    "CCTV-6",
-    "CCTV-6",
     "香港卫视",
     "香港卫视",
     "香港卫视",
