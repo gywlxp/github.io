@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-19 19:59:47",
-  "updated_iso": "2026-11-19T19:59:47+08:00",
+  "updated": "2026-11-20 02:55:47",
+  "updated_iso": "2026-11-20T02:55:47+08:00",
   "sources": [
     {
       "url": "https://github.catvod.com/https://raw.githubusercontent.com/tushen6/Tomorrow/master/lmw.json",
@@ -63,7 +63,7 @@
       "entries": 7
     }
   ],
-  "fetched_raw": 23087,
+  "fetched_raw": 23126,
   "probe_enabled": true,
   "mode": "baseline",
   "baseline": "playlist/all.m3u",
@@ -73,7 +73,9 @@
     "香港卫视",
     "香港卫视",
     "香港卫视",
-    "香港卫视"
+    "香港卫视",
+    "河南卫视",
+    "河南卫视"
   ],
   "channel_count": 68,
   "stream_count": 262,
