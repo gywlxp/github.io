@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-21 02:27:07",
-  "updated_iso": "2026-11-21T02:27:07+08:00",
+  "updated": "2026-11-21 10:59:45",
+  "updated_iso": "2026-11-21T10:59:45+08:00",
   "sources": [
     {
       "url": "https://github.catvod.com/https://raw.githubusercontent.com/tushen6/Tomorrow/master/lmw.json",
@@ -20,7 +20,7 @@
     {
       "url": "https://ghproxy.net/raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.txt",
       "ok": true,
-      "entries": 7
+      "entries": 9
     },
     {
       "url": "https://ghproxy.net/raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u",
@@ -63,7 +63,7 @@
       "entries": 7
     }
   ],
-  "fetched_raw": 23410,
+  "fetched_raw": 23497,
   "probe_enabled": true,
   "mode": "baseline",
   "baseline": "playlist/all.m3u",
