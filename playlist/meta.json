@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-22 09:56:21",
-  "updated_iso": "2026-11-22T09:56:21+08:00",
+  "updated": "2026-11-23 01:43:21",
+  "updated_iso": "2026-11-23T01:43:21+08:00",
   "sources": [
     {
       "url": "https://github.catvod.com/https://raw.githubusercontent.com/tushen6/Tomorrow/master/lmw.json",
@@ -15,22 +15,22 @@
     {
       "url": "https://ghproxy.net/raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/others_output.txt",
       "ok": true,
-      "entries": 6891
+      "entries": 6739
     },
     {
       "url": "https://ghproxy.net/raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.txt",
-      "ok": true,
-      "entries": 10
+      "ok": false,
+      "entries": 0
     },
     {
       "url": "https://ghproxy.net/raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u",
       "ok": true,
-      "entries": 62
+      "entries": 60
     },
     {
       "url": "https://live.zbds.top/tv/iptv4.m3u",
       "ok": true,
-      "entries": 0
+      "entries": 8
     },
     {
       "url": "https://live.zbds.top/tv/iptv6.m3u",
@@ -63,7 +63,7 @@
       "entries": 7
     }
   ],
-  "fetched_raw": 24271,
+  "fetched_raw": 23417,
   "probe_enabled": true,
   "mode": "baseline",
   "baseline": "playlist/all.m3u",
@@ -73,9 +73,7 @@
     "香港卫视",
     "香港卫视",
     "香港卫视",
-    "香港卫视",
-    "河南卫视",
-    "河南卫视"
+    "香港卫视"
   ],
   "channel_count": 68,
   "stream_count": 262,
