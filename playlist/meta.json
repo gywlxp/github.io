@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-23 01:43:21",
-  "updated_iso": "2026-11-23T01:43:21+08:00",
+  "updated": "2026-11-23 10:20:31",
+  "updated_iso": "2026-11-23T10:20:31+08:00",
   "sources": [
     {
       "url": "https://github.catvod.com/https://raw.githubusercontent.com/tushen6/Tomorrow/master/lmw.json",
@@ -14,8 +14,8 @@
     },
     {
       "url": "https://ghproxy.net/raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/others_output.txt",
-      "ok": true,
-      "entries": 6739
+      "ok": false,
+      "entries": 0
     },
     {
       "url": "https://ghproxy.net/raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.txt",
@@ -25,12 +25,12 @@
     {
       "url": "https://ghproxy.net/raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u",
       "ok": true,
-      "entries": 60
+      "entries": 467
     },
     {
       "url": "https://live.zbds.top/tv/iptv4.m3u",
       "ok": true,
-      "entries": 8
+      "entries": 197
     },
     {
       "url": "https://live.zbds.top/tv/iptv6.m3u",
@@ -40,12 +40,12 @@
     {
       "url": "https://ghproxy.net/raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/others_output.txt",
       "ok": true,
-      "entries": 0
+      "entries": 6149
     },
     {
       "url": "https://iptv-org.github.io/iptv/countries/cn.m3u",
       "ok": true,
-      "entries": 14
+      "entries": 11
     },
     {
       "url": "https://iptv-org.github.io/iptv/languages/zho.m3u",
@@ -63,7 +63,7 @@
       "entries": 7
     }
   ],
-  "fetched_raw": 23417,
+  "fetched_raw": 12987,
   "probe_enabled": true,
   "mode": "baseline",
   "baseline": "playlist/all.m3u",
