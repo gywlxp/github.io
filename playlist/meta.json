@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-24 13:45:59",
-  "updated_iso": "2026-11-24T13:45:59+08:00",
+  "updated": "2026-11-24 13:54:49",
+  "updated_iso": "2026-11-24T13:54:49+08:00",
   "sources": [
     {
       "url": "https://github.catvod.com/https://raw.githubusercontent.com/tushen6/Tomorrow/master/lmw.json",
@@ -8,24 +8,49 @@
       "entries": 0
     },
     {
-      "url": "https://ghproxy.net/raw.githubusercontent.com/suxuang/myIPTV/main/ipv4.m3u",
+      "url": "https://iptv-org.github.io/iptv/countries/cn.m3u",
       "ok": true,
-      "entries": 1121
+      "entries": 156
+    },
+    {
+      "url": "https://iptv-org.github.io/iptv/languages/zho.m3u",
+      "ok": true,
+      "entries": 79
+    },
+    {
+      "url": "https://iptv-org.github.io/iptv/countries/tw.m3u",
+      "ok": true,
+      "entries": 7
+    },
+    {
+      "url": "https://iptv-org.github.io/iptv/countries/hk.m3u",
+      "ok": true,
+      "entries": 7
+    },
+    {
+      "url": "https://raw.githubusercontent.com/fleung49/star/refs/heads/main/mit",
+      "ok": true,
+      "entries": 2589
     },
     {
       "url": "https://ghproxy.net/raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/others_output.txt",
+      "ok": false,
+      "entries": 0
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Supprise0901/TVBox_live/main/live.txt",
       "ok": true,
-      "entries": 9720
+      "entries": 201
     },
     {
       "url": "https://ghproxy.net/raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.txt",
       "ok": true,
-      "entries": 9
+      "entries": 344
     },
     {
       "url": "https://ghproxy.net/raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u",
-      "ok": true,
-      "entries": 66
+      "ok": false,
+      "entries": 0
     },
     {
       "url": "https://live.zbds.top/tv/iptv4.m3u",
@@ -36,34 +61,9 @@
       "url": "https://live.zbds.top/tv/iptv6.m3u",
       "ok": true,
       "entries": 0
-    },
-    {
-      "url": "https://ghproxy.net/raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/others_output.txt",
-      "ok": true,
-      "entries": 0
-    },
-    {
-      "url": "https://iptv-org.github.io/iptv/countries/cn.m3u",
-      "ok": true,
-      "entries": 11
-    },
-    {
-      "url": "https://iptv-org.github.io/iptv/languages/zho.m3u",
-      "ok": true,
-      "entries": 54
-    },
-    {
-      "url": "https://iptv-org.github.io/iptv/countries/tw.m3u",
-      "ok": true,
-      "entries": 4
-    },
-    {
-      "url": "https://iptv-org.github.io/iptv/countries/hk.m3u",
-      "ok": true,
-      "entries": 7
     }
   ],
-  "fetched_raw": 30496,
+  "fetched_raw": 5048,
   "probe_enabled": true,
   "mode": "baseline",
   "baseline": "playlist/all.m3u",
@@ -75,7 +75,7 @@
     "香港卫视",
     "香港卫视"
   ],
-  "channel_count": 68,
+  "channel_count": 69,
   "stream_count": 263,
   "group_stats": {
     "🌊港·澳·台": 11,
