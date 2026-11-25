@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-25 04:34:12",
-  "updated_iso": "2026-11-25T04:34:12+08:00",
+  "updated": "2026-11-25 12:49:19",
+  "updated_iso": "2026-11-25T12:49:19+08:00",
   "sources": [
     {
       "url": "https://github.catvod.com/https://raw.githubusercontent.com/tushen6/Tomorrow/master/lmw.json",
@@ -34,28 +34,28 @@
     },
     {
       "url": "https://ghproxy.net/raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/others_output.txt",
-      "ok": true,
-      "entries": 7127
+      "ok": false,
+      "entries": 0
     },
     {
       "url": "https://raw.githubusercontent.com/Supprise0901/TVBox_live/main/live.txt",
       "ok": true,
-      "entries": 81
+      "entries": 217
     },
     {
       "url": "https://ghproxy.net/raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.txt",
-      "ok": true,
-      "entries": 33
+      "ok": false,
+      "entries": 0
     },
     {
       "url": "https://ghproxy.net/raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u",
-      "ok": true,
-      "entries": 40
+      "ok": false,
+      "entries": 0
     },
     {
       "url": "https://live.zbds.top/tv/iptv4.m3u",
       "ok": true,
-      "entries": 0
+      "entries": 281
     },
     {
       "url": "https://live.zbds.top/tv/iptv6.m3u",
@@ -63,12 +63,14 @@
       "entries": 0
     }
   ],
-  "fetched_raw": 18311,
+  "fetched_raw": 4623,
   "probe_enabled": true,
   "mode": "baseline",
   "baseline": "playlist/all.m3u",
   "unmatched": [],
   "stale_channels": [
+    "凤凰美洲",
+    "凤凰美洲",
     "香港卫视",
     "香港卫视",
     "香港卫视",
