@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-26 11:58:33",
-  "updated_iso": "2026-11-26T11:58:33+08:00",
+  "updated": "2026-11-27 03:28:20",
+  "updated_iso": "2026-11-27T03:28:20+08:00",
   "sources": [
     {
       "url": "https://github.catvod.com/https://raw.githubusercontent.com/tushen6/Tomorrow/master/lmw.json",
@@ -35,22 +35,22 @@
     {
       "url": "https://ghproxy.net/raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/others_output.txt",
       "ok": true,
-      "entries": 8955
+      "entries": 7801
     },
     {
       "url": "https://raw.githubusercontent.com/Supprise0901/TVBox_live/main/live.txt",
       "ok": true,
-      "entries": 122
+      "entries": 93
     },
     {
       "url": "https://ghproxy.net/raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.txt",
       "ok": true,
-      "entries": 26
+      "entries": 29
     },
     {
       "url": "https://ghproxy.net/raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u",
       "ok": true,
-      "entries": 39
+      "entries": 38
     },
     {
       "url": "https://live.zbds.top/tv/iptv4.m3u",
@@ -63,7 +63,7 @@
       "entries": 0
     }
   ],
-  "fetched_raw": 20434,
+  "fetched_raw": 19251,
   "probe_enabled": true,
   "mode": "baseline",
   "baseline": "playlist/all.m3u",
